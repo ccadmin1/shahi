@@ -939,11 +939,7 @@ async def auto_filter(client, msg, spoll=False):
         )
         btn.insert(0,
             [InlineKeyboardButton(text="💫 𝙐𝙥𝙙𝙖𝙩𝙚𝙨",url="https://t.me/+3Y5WClCoXopmM2E1")],
-            [
-
-            InlineKeyboardButton(f'🎪 {search} 🎪', 'dupe')
-
-        ]
+            [InlineKeyboardButton(f'🎪 {search} 🎪', 'dupe')]
         )
     else:
         btn.append(
@@ -951,11 +947,7 @@ async def auto_filter(client, msg, spoll=False):
         )
         btn.insert(0,
             [InlineKeyboardButton(text="💫 𝙐𝙥𝙙𝙖𝙩𝙚𝙨",url="https://t.me/+97gmBAMfVDVlN2Q1")],
-            [
-
-            InlineKeyboardButton(f'🎪 {search} 🎪', 'dupe')]
-hdjdj
-
+            [InlineKeyboardButton(f'🎪 {search} 🎪', 'dupe')]
         )
     reply_id = message.reply_to_message.message_id if message.reply_to_message else message.message_id
     imdb = await get_poster(search, file=(files[0]).file_name) if settings["imdb"] else None
