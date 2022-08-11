@@ -368,11 +368,6 @@ async def cb_handler(client: Client, query: CallbackQuery):
         buttons = [
             [
                 InlineKeyboardButton('💫 𝙐𝙥𝙙𝙖𝙩𝙚𝙨', url='https://t.me/+3Y5WClCoXopmM2E1')
-            ],
-            [
-
-                InlineKeyboardButton(f'🎪 {search} 🎪', 'dupe')
-
             ]
             ]
             
