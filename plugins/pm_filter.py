@@ -938,16 +938,17 @@ async def auto_filter(client, msg, spoll=False):
              InlineKeyboardButton(text="𝙉𝙀𝙓𝙏 ⫸", callback_data=f"next_{req}_{key}_{offset}")]
         )
         btn.insert(0,
-            [InlineKeyboardButton(text="💫 𝙐𝙥𝙙𝙖𝙩𝙚𝙨",url="https://t.me/+3Y5WClCoXopmM2E1"),
-             InlineKeyboardButton(f'🎪 {search} 🎪', 'dupe')]
+            [InlineKeyboardButton(text="💫 𝙐𝙥𝙙𝙖𝙩𝙚𝙨",url="https://t.me/+3Y5WClCoXopmM2E1")],
+            
+            [InlineKeyboardButton(f'🎪 {search} 🎪', 'dupe')]
         )
     else:
         btn.append(
             [InlineKeyboardButton(text="💠 1/1", callback_data="pages")]
         )
         btn.insert(0,
-            [InlineKeyboardButton(text="💫 𝙐𝙥𝙙𝙖𝙩𝙚𝙨",url="https://t.me/+3Y5WClCoXopmM2E1"),
-             InlineKeyboardButton(f'🎪 {search} 🎪', 'dupe')]
+            [InlineKeyboardButton(text="💫 𝙐𝙥𝙙𝙖𝙩𝙚𝙨",url="https://t.me/+3Y5WClCoXopmM2E1")],
+            [InlineKeyboardButton(f'🎪 {search} 🎪', 'dupe')]
         )
     reply_id = message.reply_to_message.message_id if message.reply_to_message else message.message_id
     imdb = await get_poster(search, file=(files[0]).file_name) if settings["imdb"] else None
@@ -988,7 +989,7 @@ async def auto_filter(client, msg, spoll=False):
         cap = f"Here is what i found for your query {search} ᴛᴏᴛᴀʟ ʀᴇsᴜʟᴛs 1/{round(int(total_results) / 10)}.\n✍️ Note:</b> This message will be Auto-deleted after 10 minutes to avoid copyright issues.\n"
     if imdb and imdb.get('poster'):
         try:
-            hehe = await message.reply_photo(photo="https://te.legra.ph/file/f897dfe83f13b5fcc449a.jpg", caption=cap[:1024], reply_to_message_id=reply_id, reply_markup=InlineKeyboardMarkup(btn))
+            hehe = await message.reply_photo(photo="https://telegra.ph/file/1833d2c5a2720354b661f.jpg", caption=cap[:1024], reply_to_message_id=reply_id, reply_markup=InlineKeyboardMarkup(btn))
             await asyncio.sleep(600)
             await hehe.delete()
             await message.delete()
@@ -1006,7 +1007,7 @@ async def auto_filter(client, msg, spoll=False):
             await fek.delete()
             await msg.delete()
     else:
-        fuk = await message.reply_photo(photo="https://telegra.ph/file/1833d2c5a2720354b661f.jpg", caption=cap, reply_to_message_id=reply_id, reply_markup=InlineKeyboardMarkup(btn))
+        fuk = await message.reply_photo(photo="https://telegra.ph/file/1833d2c5a2720354b661f.jpgg", caption=cap, reply_to_message_id=reply_id, reply_markup=InlineKeyboardMarkup(btn))
         await asyncio.sleep(600)
         await fuk.delete()
         await msg.delete()
